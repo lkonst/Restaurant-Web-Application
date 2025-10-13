@@ -22,5 +22,4 @@ ENV/
 .idea/
 .DS_Store
 
-# Node (if any)
 node_modules/
