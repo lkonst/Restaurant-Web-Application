@@ -32,3 +32,6 @@ venv/
 staticfiles/
 media/
 .vscode/
+
+
+.history/
