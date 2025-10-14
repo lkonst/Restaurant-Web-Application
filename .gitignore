@@ -23,3 +23,12 @@ ENV/
 .DS_Store
 
 node_modules/
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+.venv/
+venv/
+staticfiles/
+media/
+.vscode/
