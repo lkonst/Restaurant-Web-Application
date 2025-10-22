@@ -21,10 +21,11 @@ from rest_framework import routers
 from rest_framework.routers import DefaultRouter
 
 from restaurant.views import BookingViewSet
-
+from LittleLemonAPI.views import UserViewSet
 
 router = DefaultRouter()
 router.register(r"tables", BookingViewSet, basename="booking")
+router.register("users", UserViewSet, basename="user")
 
 urlpatterns = [
     path("admin/", admin.site.urls),
