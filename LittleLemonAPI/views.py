@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 # Create your views here.
 
 
-class MenuItemView(ListCreateAPIView):
+class MenuItemsView(ListCreateAPIView):
     """GET list, POST create"""
 
     queryset = MenuItem.objects.all()
