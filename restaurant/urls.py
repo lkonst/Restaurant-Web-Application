@@ -13,5 +13,4 @@ urlpatterns = [
     path("bookings", views.bookings, name="bookings"),
     path("menu/items/", views.MenuItemView.as_view(), name="menu_items"),
     path("menu/items/<int:pk>/", views.SingleMenuItemView.as_view(), name="single_menu_item"),
-    path("api-token-auth/", obtain_auth_token, name="api_token_auth"),
 ]

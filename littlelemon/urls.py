@@ -23,6 +23,8 @@ from rest_framework.routers import DefaultRouter
 from restaurant.views import BookingViewSet
 from LittleLemonAPI.views import UserViewSet
 
+from rest_framework.authtoken.views import obtain_auth_token
+
 router = DefaultRouter()
 router.register(r"tables", BookingViewSet, basename="booking")
 router.register("users", UserViewSet, basename="user")
@@ -36,4 +38,5 @@ urlpatterns = [
     path("auth/", include("djoser.urls")),
     path("auth/", include("djoser.urls.authtoken")),
     path("api-auth/", include("rest_framework.urls")),
+    path("api-token-auth/", obtain_auth_token),
 ]
