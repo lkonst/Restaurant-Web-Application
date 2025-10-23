@@ -60,11 +60,7 @@ def bookings(request):
     if request.method == "POST":
         data = json.loads(request.body)
         reservation_slot = data["reservation_slot"]
-        exist = (
-            Booking.objects.filter(reservation_date=data["reservation_date"])
-            .filter(reservation_slot=reservation_slot)
-            .exists()
-        )
+        exist = Booking.objects.filter(reservation_date=data["reservation_date"]).filter(reservation_slot=reservation_slot).exists()
         if not exist:
             booking = Booking(
                 first_name=data["first_name"],
@@ -84,6 +80,7 @@ def bookings(request):
 
 
 class MenuItemView(ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
