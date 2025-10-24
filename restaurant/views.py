@@ -79,7 +79,7 @@ def bookings(request):
     return HttpResponse(booking_json, content_type="application/json")
 
 
-class MenuItemView(ListCreateAPIView):
+class MenuItemsView(ListCreateAPIView):
     permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
