@@ -25,7 +25,9 @@ class Menu(models.Model):
     title = models.CharField(max_length=200, default="Untitled")
     inventory = models.IntegerField(default=0)
 
-    def __str__(self):
-        # return self.name
-        return self.title
+    # def __str__(self):
+    #     # return self.name
+    #     return self.title
 
+    def __str__(self):
+        return f"{self.title} : {str(self.price)}"
