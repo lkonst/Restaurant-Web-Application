@@ -26,12 +26,8 @@ class MenuItemTestCase(TestCase):
 
     def test_get_menu_items(self):
         url = reverse("menu_items")
-        print(url, "====================")
-        print(type(url))
 
         response = self.client.get(url)
-        print(response.status_code, "====================", response)
-        print(type(response))
 
         serialized = MenuSerializer(Menu.objects.all(), many=True)
 
