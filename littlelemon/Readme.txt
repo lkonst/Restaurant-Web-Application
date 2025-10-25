@@ -4,6 +4,7 @@
 
 2) 
 Endpoints to test (Menu Items)
+
 A) List & Create
 
 URL: http://127.0.0.1:8000/api/menu-items/
@@ -26,8 +27,8 @@ Headers:
 
 Expected responses:
 
-GET → 200 OK with a JSON array of menu items
-POST → 201 Created with the created item, e.g.:
+GET --> 200 OK with a JSON array of menu items
+POST --> 201 Created with the created item, e.g.:
 {
   "id": 15,
   "title": "Baguette",
@@ -71,9 +72,9 @@ DELETE http://127.0.0.1:8000/api/menu-items/5/
 
 Expected responses:
 
-GET (detail) → 200 OK with the item JSON
-PUT/PATCH → 200 OK (or 202/204 depending on config) with updated item
-DELETE → 204 No Content
+GET (detail) --> 200 OK with the item JSON
+PUT/PATCH --> 200 OK (or 202/204 depending on config) with updated item
+DELETE --> 204 No Content
 
 
 3) 
